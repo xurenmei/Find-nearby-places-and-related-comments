@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainRes" >
+    
+    <Spinner 
+        android:id="@+id/spr_place_type"
+		android:layout_width="wrap_content"
+		android:layout_height="60dp"
+		android:layout_alignParentTop="true" />
+    
+    <Button
+        android:id="@+id/btn_find"
+		android:layout_width="wrap_content"
+		android:layout_height="60dp"		
+		android:layout_alignParentTop="true"
+		android:layout_toRightOf="@id/spr_place_type"
+		android:text="@string/str_btn_find" />    
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@+id/map"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/spr_place_type"
+		class="com.google.android.gms.maps.SupportMapFragment" />
+
+    <Button
+        android:id="@+id/btnMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="onClick_Me"
+        android:text="@string/btnMe" />
+
+    <Button
+        android:id="@+id/btnOut"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="onClick_Logout"
+        android:text="@string/btnOut" />
+
+    <Button
+        android:id="@+id/btnFriends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="19dp"
+        android:layout_toLeftOf="@+id/btnSMS"
+        android:onClick="onClick_Friends"
+        android:text="@string/btnFriends" />
+
+    <Button
+        android:id="@+id/btnSMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="14dp"
+        android:layout_toLeftOf="@+id/btnOut"
+        android:onClick="onClick_SMS"
+        android:text="@string/btnSMS" />
+
+    <Button
+        android:id="@+id/btnIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/spr_place_type"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:onClick="onClick_Login"
+        android:text="@string/btnIn" />
+    
+</RelativeLayout>
